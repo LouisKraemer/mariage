@@ -1,0 +1,26 @@
+<div id="menu-button" [ngClass]="{'open-menu-btn': openMenu}" (click)="openMenu = !openMenu">
+    <div class="m-y-1"></div>
+    <div class="m-y-1"></div>
+    <div class="m-y-1"></div>
+</div>
+
+<div id="side-menu" [ngClass]="{'open-menu': openMenu}">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">Menu</div>
+        </div>
+    </div>
+    <ul>
+        <li routerLinkActive="active" (click)="openMenu = false" routerLink="accueil"><a>Accueil</a></li>
+        <li routerLinkActive="active" (click)="openMenu = false" routerLink="confirmation"><a>Confirmer votre présence</a></li>
+        <li routerLinkActive="active" (click)="openMenu = false" routerLink="deroulement"><a>Déroulement de la journée</a></li>
+        <li routerLinkActive="active" (click)="openMenu = false" routerLink="hebergement"><a>Hébergement</a></li>
+        <li routerLinkActive="active" (click)="openMenu = false" routerLink="plan"><a>Plan</a></li>
+        <li routerLinkActive="active" (click)="openMenu = false" routerLink="liste"><a>Liste de mariage</a></li>
+        <li routerLinkActive="active" (click)="openMenu = false" routerLink="photos"><a>Photos des mariés</a></li>
+    </ul>
+</div>
+
+<div id="hide-screen" [ngClass]="{'hide-screen': openMenu}" (click)="openMenu = false"></div>
+
+<router-outlet></router-outlet>

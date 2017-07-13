@@ -1,0 +1,134 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+#menu-button {
+    position: fixed;
+    z-index: 9000;
+    top: 0;
+    height: 50px;
+    width: 60px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: margin-left .4s;
+    div {
+        width: 100%;
+        height: 10%;
+        background-color: black;
+    }
+}
+
+#hide-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4000;
+    display: none;
+}
+
+.hide-screen {
+    display: block !important;
+}
+
+#side-menu {
+    z-index: 5000;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 70%;
+    margin-left: -75%;
+    box-shadow: 6px 0 6px rgba(0, 0, 0, .1);
+    transition: margin-left .4s;
+    ul {
+        list-style: none;
+        width: 100%;
+        padding-left: 0;
+        li {
+            cursor: pointer;
+            padding: 20px;
+            transition: background-color .2s, padding-left .25s;
+            &:hover {
+                //                background-color: rgba(0, 0, 0, 0.1);
+                padding-left: 35px;
+            }
+            &:active,
+            &:focus {
+                outline: none;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .active {
+                background-color: aqua;
+            }
+        }
+    }
+    div div div {
+        padding: 40px;
+        font-size: 30px;
+        text-align: center;
+        cursor: default;
+    }
+}
+
+.open-menu {
+    margin-left: 0 !important;
+}
+
+.open-menu-btn {
+    margin-left: calc(70% - 60px) !important;
+}
+
+@include media-breakpoint-up(sm) {
+    #side-menu {
+        width: 55%;
+        margin-left: -58%;
+    }
+    .open-menu {
+        margin-left: 0 !important;
+    }
+    .open-menu-btn {
+        margin-left: calc(55% - 60px) !important;
+    }
+    .content {
+        margin-top: 70px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #side-menu {
+        width: 40%;
+        margin-left: -43%;
+    }
+    .open-menu {
+        margin-left: 0 !important;
+    }
+    .open-menu-btn {
+        margin-left: calc(40% - 60px) !important;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    #side-menu {
+        width: 25%;
+        margin-left: -28%;
+    }
+    .open-menu {
+        margin-left: 0 !important;
+    }
+    .open-menu-btn {
+        margin-left: calc(25% - 60px) !important;
+    }
+    .content {
+        margin-top: 70px;
+    }
+}
+
+.content {
+    margin-top: 60px;
+}

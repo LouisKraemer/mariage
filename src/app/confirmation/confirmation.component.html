@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 title">Confirmation</div>
+    </div>
+    <div class="row">
+        <div class="col-12 offset-md-3 col-md-6">
+            <!--        <div style="display: flex; flex-direction: column; justify-content: center;">-->
+            <div class="input-text" style="position: relative; margin-top: 20px;">
+                <input type="text" id="searchField" [ngModel]="searchUser" (ngModelChange)="search($event)">
+                <label>Nom et prénom</label>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <div class="result">
+                    <div *ngFor="let user of searchResult" (click)="selectUser($event)" id="{{user._id}}">{{user.lastName}} {{user.firstName}}</div>
+                </div>
+            </div>
+            <div *ngIf="updateUser != null" id="inviteInfo">
+                <div style="display: flex; justify-content: center; font-weight: bold; margin-bottom: 50px; font-size: 20px;">
+                    {{updateUser.lastName}} {{updateUser.firstName}}
+                </div>
+                <div>
+                    <label class="labelCbx" for="coming">Je viens au mariage</label>
+                    <div class="card" (click)="updateUser.coming = !updateUser.coming">
+                        <input type="checkbox" [(ngModel)]="updateUser.coming" name="coming">
+                        <span class="switch"></span><span class="toggle"></span>
+                        <!--                    <label for="coming" class="lbl"></label>-->
+                    </div>
+                </div>
+                <div *ngIf="updateUser.coming && updateUser.apero.invited">
+                    <label class="labelCbx" for="apero">Apéritif</label>
+                    <div class="card" (click)="updateUser.apero.coming = !updateUser.apero.coming">
+                        <input type="checkbox" [(ngModel)]="updateUser.apero.coming" name="apero">
+                        <span class="switch"></span><span class="toggle"></span>
+                    </div>
+                </div>
+                <div *ngIf="updateUser.coming && updateUser.meal.invited">
+                    <label class="labelCbx" for="meal">Repas</label>
+                    <div class="card" (click)="updateUser.meal.coming = !updateUser.meal.coming">
+                        <input type="checkbox" [(ngModel)]="updateUser.meal.coming" name="meal">
+                        <span class="switch"></span><span class="toggle"></span>
+                    </div>
+                </div>
+                <div *ngIf="updateUser.coming && updateUser.brunch.invited">
+                    <label class="labelCbx" for="brunch">Brunch</label>
+                    <div class="card" (click)="updateUser.brunch.coming = !updateUser.brunch.coming">
+                        <input type="checkbox" [(ngModel)]="updateUser.brunch.coming" name="brunch">
+                        <span class="switch"></span><span class="toggle"></span>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="updateUser != null" style="display: flex; justify-content: center; margin-top: 50px;">
+                <button class="btn" (click)="updateInfo()">Confirmer</button>
+            </div>
+        </div>
+    </div>
+</div>

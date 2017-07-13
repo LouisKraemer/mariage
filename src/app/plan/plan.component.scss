@@ -1,0 +1,17 @@
+//@import "node_modules/bootstrap/scss/bootstrap.scss";
+#maps-container {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    div div {
+        height: 75%;
+        padding-left: 5%;
+        padding-right: 5%;
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
