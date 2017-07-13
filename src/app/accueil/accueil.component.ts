@@ -9,7 +9,7 @@ import { routerTransition } from '../router.animations';
     host: {'[@routerTransition]': ''}
 })
 export class AccueilComponent implements OnInit {
-
+    
   constructor() { }
 
   ngOnInit() {

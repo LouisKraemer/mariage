@@ -15,6 +15,7 @@ import { DeroulementComponent } from './deroulement/deroulement.component';
 import { HebergementComponent } from './hebergement/hebergement.component';
 import { ListeComponent } from './liste/liste.component';
 import { PhotosComponent } from './photos/photos.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: 'confirmation', component: ConfirmationComponent },
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     { path: 'deroulement', component: DeroulementComponent },
     { path: 'hebergement', component: HebergementComponent },
     { path: 'liste', component: ListeComponent },
-    { path: 'photos', component: PhotosComponent }
+    { path: 'photos', component: PhotosComponent },
+    { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     DeroulementComponent,
     HebergementComponent,
     ListeComponent,
-    PhotosComponent
+    PhotosComponent,
+    ContactComponent
   ],
   imports: [RouterModule.forRoot(
       appRoutes,

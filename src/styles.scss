@@ -1,14 +1,23 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
-
 body {
     font-family: 'Slabo 27px';
 }
 
+.main-content {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 .title {
-    height: 50px;
-    line-height: 50px;
+    z-index: 3000;
+    height: 60px;
+    line-height: 60px;
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
 }
 
 .input-text {
