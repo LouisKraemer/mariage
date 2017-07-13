@@ -104,3 +104,25 @@ body {
         background: transparent;
     }
 }
+
+select {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: 0;
+    height: 3rem;
+    line-height: 3rem;
+    width: 50px;
+    font-size: 1rem;
+    margin: 0 0 15px;
+    padding: 0;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    
+}

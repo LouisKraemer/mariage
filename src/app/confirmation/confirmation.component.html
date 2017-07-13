@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div *ngIf="updateUser != null" id="inviteInfo">
-                    <div style="display: flex; justify-content: center; font-weight: bold; margin-bottom: 50px; font-size: 20px;">
+                    <div style="display: flex; justify-content: center; font-weight: bold; margin-bottom: 40px; font-size: 20px;">
                         {{updateUser.lastName}} {{updateUser.firstName}}
                     </div>
                     <div>
@@ -48,8 +48,25 @@
                             <span class="switch"></span><span class="toggle"></span>
                         </div>
                     </div>
+                    <div *ngIf="updateUser.coming">
+                        <label for="children">Enfants</label>
+                        <select [(ngModel)]="updateUser.children">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+<!--
+                        <label class="labelCbx" for="brunch">Brunch</label>
+                        <div class="card" (click)="updateUser.brunch.coming = !updateUser.brunch.coming">
+                            <input type="checkbox" [(ngModel)]="updateUser.brunch.coming" name="brunch">
+                            <span class="switch"></span><span class="toggle"></span>
+                        </div>
+-->
+                    </div>
                 </div>
-                <div *ngIf="updateUser != null" style="display: flex; justify-content: center; margin-top: 50px;">
+                <div *ngIf="updateUser != null" style="display: flex; justify-content: center; margin-top: 40px; margin-bottom: 10px">
                     <button class="btn" (click)="updateInfo()">Confirmer</button>
                 </div>
             </div>
