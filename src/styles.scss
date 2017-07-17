@@ -124,5 +124,52 @@ select {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    
+}
+
+.card {
+    display: inline-block;
+    margin: 7px;
+    margin: 5px;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+    border: none !important;
+    .switch {
+        display: block;
+        width: 50px;
+        height: 20px;
+        background: #939393;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        transition: .5s;
+    }
+    .toggle {
+        height: 23px;
+        width: 23px;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        transition: .5s;
+    }
+    input[type='checkbox'] {
+        display: none;
+    }
+    input[type='checkbox']:checked~.toggle {
+        background: #009688;
+        left: 26px;
+        transition: .5s;
+    }
+    input[type='checkbox']:checked~.switch {
+        background: #6DBEB7;
+        transition: .5s;
+    }
+}
+
+.labelCbx {
+    line-height: 30px;
 }

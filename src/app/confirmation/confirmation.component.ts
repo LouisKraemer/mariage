@@ -14,6 +14,7 @@ export class ConfirmationComponent implements OnInit {
     
     public user: any;
     updateUser = null;
+    showConfirmPopup = false;
     searchUser = "";
     searchResult = [];
 
@@ -34,6 +35,10 @@ export class ConfirmationComponent implements OnInit {
     updateInfo() {
         this.userService.modifyUser(this.updateUser);
         this.updateUser = null;
+        this.showConfirmPopup = true;
+        setTimeout(() => {
+            this.showConfirmPopup = false;
+        }, 2000);
     }
     
     search(value) {
