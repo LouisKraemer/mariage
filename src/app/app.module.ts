@@ -6,10 +6,10 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 import { UserServiceService } from './user-service.service';
 import { PlanComponent } from './plan/plan.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { DeroulementComponent } from './deroulement/deroulement.component';
 import { HebergementComponent } from './hebergement/hebergement.component';
