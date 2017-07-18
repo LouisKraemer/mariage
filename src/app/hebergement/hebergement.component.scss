@@ -1,4 +1,12 @@
 .main-content {
     background: url("../../image/bedroom.jpg") no-repeat center;
     background-size: cover;
+    overflow-y: scroll;
+}
+
+.roomPic {
+    height: 100px;
+    width: 100px;
+    background: no-repeat center;
+    background-size: cover;
 }

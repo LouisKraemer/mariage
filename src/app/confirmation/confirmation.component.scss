@@ -1,7 +1,6 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #inviteInfo {

@@ -16,6 +16,7 @@ import { HebergementComponent } from './hebergement/hebergement.component';
 import { ListeComponent } from './liste/liste.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ContactComponent } from './contact/contact.component';
+import { EvenPipe } from './even.pipe';
 
 const appRoutes: Routes = [
   { path: 'confirmation', component: ConfirmationComponent },
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     HebergementComponent,
     ListeComponent,
     PhotosComponent,
-    ContactComponent
+    ContactComponent,
+    EvenPipe
   ],
   imports: [RouterModule.forRoot(
       appRoutes,

@@ -2,5 +2,12 @@
     <div class="row">
         <div class="col-12 title">Hébergement</div>
     </div>
-    <div class="main-content"></div>
+    <div class="main-content">
+        <div class="row justify-content-around">
+            <div *ngFor="let gite of gites" class="col-10 col-md-5" style="background-color: aqua;">
+                <div>{{ gite.name }}</div>
+                <div class="roomPic" [ngStyle]="{'background-image': 'url(../../image/gites/' + gite.image + ')'}"></div>
+            </div>
+        </div>
+    </div>
 </div>
