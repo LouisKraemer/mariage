@@ -12,7 +12,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class UserServiceService {
     
-//    private apiUrl = 'http://localhost:3000/api';
     private apiUrl = '//server-weegle.herokuapp.com/api';
     data: any;
 
