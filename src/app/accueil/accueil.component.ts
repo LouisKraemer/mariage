@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../router.animations';
+import { UserServiceService} from '../user-service.service';
 
 @Component({
   selector: 'app-accueil',
@@ -10,7 +11,9 @@ import { routerTransition } from '../router.animations';
 })
 export class AccueilComponent implements OnInit {
     
-  constructor() { }
+  constructor(public userService: UserServiceService) {
+      userService.getUsers();
+  }
 
   ngOnInit() {
   }
