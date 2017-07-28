@@ -12,7 +12,11 @@ export class HebergementComponent implements OnInit {
     
     gites = [{
         name: "Gîte Les Pignets",
-        image: "les_pignets.jpg"
+        image: "les_pignets.jpg",
+//        adress: "21 rue de l'église 67220 Albe",
+//        phone: "03 88 57 75 94",
+//        mail: "alfred@les-pignets.info",
+        web: "http://ferien-im-elsass.de/"
     }, {
         name: 'Gîte de Madame Marthe Vonderscher'
     }, {
