@@ -4,10 +4,19 @@
     </div>
     <div class="main-content">
         <div class="row justify-content-around">
-            <div *ngFor="let gite of gites" class="col-10 col-md-5" style="background-color: aqua;">
-                <div>{{ gite.name }}</div>
-                <div class="roomPic" [ngStyle]="{'background-image': 'url(../../image/gites/' + gite.image + ')'}"></div>
+            <div class="col-10 col-md-6">
+              <a href="http://www.tourisme-valdeville.fr/fr/dormir/hotels">Hôtel</a>
             </div>
         </div>
+      <div class="row justify-content-around">
+        <div class="col-10 col-md-6">
+          <a href="http://www.tourisme-valdeville.fr/fr/dormir/chambres-hotes">Chambre d'hôte</a>
+        </div>
+      </div>
+      <div class="row justify-content-around">
+        <div class="col-10 col-md-6">
+          <a href="http://www.tourisme-valdeville.fr/fr/dormir/gites">Gîte</a>
+        </div>
+      </div>
     </div>
 </div>

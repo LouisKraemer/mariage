@@ -1,12 +1,84 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
-    background: url("../../image/bedroom.jpg") no-repeat center;
+    background: url("../../assets/images/bedroom.jpg") no-repeat center;
     background-size: cover;
     overflow-y: scroll;
+    .roomDiv {
+//        background-color: aqua;
+        margin: 20px;
+        .pic {
+            border-radius: 5px;
+            width: 200px;
+            background: no-repeat center;
+            background-size: cover;
+            height: 200px;
+            font-size: 20px;
+            div {
+                border-radius: 5px;
+                background-color: rgba(0,0,0,.3);
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
-.roomPic {
-    height: 100px;
-    width: 100px;
-    background: no-repeat center;
-    background-size: cover;
+@include media-breakpoint-up(md) {
+    .pic {
+        div {
+            background-color: rgba(0,0,0,0) !important;
+            transition: background-color .3s;
+            a {
+                color: rgba(255,255,255,0) !important;
+                transition: color .3s;
+            }
+            &:hover {
+                background-color: rgba(0,0,0,.5) !important;
+                > a {
+                    color: rgba(255,255,255,1) !important;
+                }
+            }
+        }
+    }
 }
+
+//.roomDiv {
+//    padding: 20px;
+//    margin: 20px;
+//    background-color: aqua;
+//    div {
+//        padding: 10px;
+//    }
+//    .info {
+////        display: flex;
+////        flex-direction: row;
+//        .description {
+//            ul {
+//                list-style: none;
+//                li {
+//                    padding: 5px;
+//                }
+//            }
+//        }
+//        .roomPic {
+//            padding: 0;
+//            height: 200px;
+//            width: 200px;
+//            background: no-repeat center;
+//            background-size: cover;
+//            transition: height .4s, width .4s;
+//        }
+//    }
+//}
+//
+//@include media-breakpoint-up(md) {
+//    .roomDiv {
+//        .roomPic {
+//            &:hover {
+//                //                height: 200px;
+//                //                width: 200px;
+//            }
+//        }
+//    }
+//}
