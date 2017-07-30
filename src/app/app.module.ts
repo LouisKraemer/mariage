@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
+import {AngularFireModule} from "angularfire2";
+import {AngularFireDatabaseModule} from "angularfire2/database";
+
 import { UserServiceService } from './user-service.service';
 import { PlanComponent } from './plan/plan.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
@@ -17,6 +20,8 @@ import { ListeComponent } from './liste/liste.component';
 import { PhotosComponent } from './photos/photos.component';
 import { ContactComponent } from './contact/contact.component';
 import { EvenPipe } from './even.pipe';
+import { SearchPipe } from './search.pipe';
+
 
 const appRoutes: Routes = [
   { path: 'confirmation', component: ConfirmationComponent },
@@ -30,6 +35,15 @@ const appRoutes: Routes = [
     { path: 'contact', component: ContactComponent }
 ];
 
+export const firebaseConfig = {
+  apiKey: "AIzaSyAbaDCrgLsPq7TiGFSy2JkovoFyeQcCJFs",
+  authDomain: "mariage-6c200.firebaseapp.com",
+  databaseURL: "https://mariage-6c200.firebaseio.com",
+  projectId: "mariage-6c200",
+  storageBucket: "mariage-6c200.appspot.com",
+  messagingSenderId: "508632744604"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +55,8 @@ const appRoutes: Routes = [
     ListeComponent,
     PhotosComponent,
     ContactComponent,
-    EvenPipe
+    EvenPipe,
+    SearchPipe
   ],
   imports: [RouterModule.forRoot(
       appRoutes,
@@ -50,7 +65,9 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]
