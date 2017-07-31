@@ -3,24 +3,17 @@
     background: url("../../assets/images/bedroom.jpg") no-repeat center;
     background-size: cover;
     overflow-y: scroll;
-    .roomDiv {
-//        background-color: aqua;
-        margin: 20px;
-        .pic {
-            border-radius: 5px;
-            width: 200px;
-            background: no-repeat center;
-            background-size: cover;
-            height: 200px;
-            font-size: 20px;
-            div {
-                border-radius: 5px;
-                background-color: rgba(0,0,0,.3);
-                a {
-                    color: white;
-                }
-            }
-        }
+    a {
+      width: 50%;
+      color: white;
+      font-size: 18px;
+      background-color: #0288D1;
+      padding: 20px;
+      text-decoration: none;
+      transition: width .4s;
+      &:hover {
+        width: 70%;
+      }
     }
 }
 
