@@ -1,6 +1,15 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
-    overflow-y: auto;
+  button {
+    width: 50%;
+    color: white;
+    font-size: 18px;
+    background-color: #0288D1;
+    padding: 20px;
+    text-decoration: none;
+    transition: width .4s;
+    border: none;
+  }
 }
 
 #inviteInfo {
@@ -36,4 +45,26 @@
 
 .show {
     transform: translateX(0) !important;
+}
+
+@include media-breakpoint-up(sm) {
+  button {
+    width: 50% !important;
+  }
+}
+@include media-breakpoint-up(md) {
+  button {
+    width: 40% !important;
+    &:hover {
+      width: 50% !important;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  button {
+    width: 30% !important;
+    &:hover {
+      width: 40% !important;
+    }
+  }
 }

@@ -35,7 +35,8 @@
 }
 
 #side-menu {
-    background-color: #212121;
+  overflow-y: auto;
+  background-color: #212121;
     color: white;
     z-index: 5000;
     font-size: 20px;
