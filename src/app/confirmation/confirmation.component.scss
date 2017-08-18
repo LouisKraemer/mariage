@@ -1,70 +1,26 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
-  button {
-    width: 50%;
-    color: white;
-    font-size: 18px;
-    background-color: #0288D1;
-    padding: 20px;
-    text-decoration: none;
-    transition: width .4s;
-    border: none;
-  }
-}
-
-#inviteInfo {
-    width: 100%;
+  md-card {
     margin-top: 30px;
-}
-
-#inviteInfo>div {
-    padding: 10px;
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#searchField {
-    width: 100%;
-}
-
-#confirmPopup {
-  background-color: #6DBEB7;
-  z-index: 9900;
-  padding: 20px;
-  position: fixed;
-  top: 70px;
-  left: 5px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  box-shadow: 0 0 5px black;
-  border-radius: 5px;
-  transform: translateX(calc(-100% - 10px));
-  transition: transform .4s;
-}
-
-.show {
-    transform: translateX(0) !important;
-}
-
-@include media-breakpoint-up(sm) {
-  button {
-    width: 50% !important;
-  }
-}
-@include media-breakpoint-up(md) {
-  button {
-    width: 40% !important;
-    &:hover {
-      width: 50% !important;
+    md-card-header {
+      justify-content: center;
+      md-card-title {
+        font-size: 20px;
+      }
     }
-  }
-}
-@include media-breakpoint-up(lg) {
-  button {
-    width: 30% !important;
-    &:hover {
-      width: 40% !important;
+    md-card-content {
+      margin: 20px;
+      section {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+    md-card-actions {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        padding: 10px;
+      }
     }
   }
 }

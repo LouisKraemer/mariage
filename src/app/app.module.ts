@@ -21,6 +21,11 @@ import { PhotosComponent } from './photos/photos.component';
 import { ContactComponent } from './contact/contact.component';
 import { EvenPipe } from './even.pipe';
 import { SearchPipe } from './search.pipe';
+import {
+  MdAutocompleteModule, MdButtonModule, MdCardModule, MdCheckboxModule, MdInputModule,
+  MdSelectModule,
+  MdSlideToggleModule, MdSnackBarModule
+} from "@angular/material";
 
 
 const appRoutes: Routes = [
@@ -67,7 +72,15 @@ export const firebaseConfig = {
     FormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MdInputModule,
+    MdAutocompleteModule,
+    MdCardModule,
+    MdSlideToggleModule,
+    MdCheckboxModule,
+    MdButtonModule,
+    MdSelectModule,
+    MdSnackBarModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]

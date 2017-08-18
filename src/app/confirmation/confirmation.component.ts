@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService} from '../user-service.service';
 import { routerTransition } from '../router.animations';
+import {FormControl} from "@angular/forms";
+import {Observable} from "rxjs/Observable";
+import {MdSnackBar} from "@angular/material";
 
 @Component({
   selector: 'app-confirmation',
@@ -12,13 +15,14 @@ import { routerTransition } from '../router.animations';
 })
 export class ConfirmationComponent implements OnInit {
 
+  searchControl = new FormControl();
+
     public users: any;
     updateUser = null;
     userKey: string;
-    showConfirmPopup = false;
     searchUser = "";
 
-  constructor(public userService: UserServiceService) {
+  constructor(public userService: UserServiceService, public snackBar: MdSnackBar) {
     this.users = this.userService.getUsers();
   }
 
@@ -42,10 +46,9 @@ export class ConfirmationComponent implements OnInit {
   updateInfo() {
     this.userService.updateUser(this.updateUser, this.userKey).then(_ => {
       this.updateUser = null;
-      this.showConfirmPopup = true;
-      setTimeout(() => {
-        this.showConfirmPopup = false;
-      }, 2000);
+      this.snackBar.open('Merci pour votre confirmation', '', {
+        duration: 2000
+      })
     })
   }
 
