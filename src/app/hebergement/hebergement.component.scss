@@ -1,24 +1,24 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
+  md-card {
+    md-card-title {
+      font-size: 20px;
+    }
+    md-card-actions {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        padding: 5px;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
     background: url("../../assets/images/bedroom.jpg") no-repeat center;
     background-size: cover;
-    a {
-      width: 50%;
-      color: white;
-      font-size: 18px;
-      background-color: #0288D1;
-      padding: 20px;
-      text-decoration: none;
-      transition: width .4s;
-    }
 }
 
 .title {
   background-color: #EFEBE9;
-}
-
-@include media-breakpoint-up(md) {
-  a:hover {
-    width: 70% !important;
-  }
 }
