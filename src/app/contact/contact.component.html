@@ -2,110 +2,26 @@
     <div class="row">
         <div class="col-12 title">Contact</div>
     </div>
-    <div class="main-content">
+    <div class="main-content p-4">
       <div class="row justify-content-around">
-        <div class="col-10 col-md-5 text-center p-5 m-3 contactInfo">
-          <p>
-            <span>La mariée</span>
-          </p>
-          <p>
-            <a>Mail</a>
-          </p>
-          <p>
-            06
-          </p>
-        </div>
-        <div class="col-10 col-md-5 text-center p-5 m-3 contactInfo">
-          <p>
-            <span>Le marié</span>
-          </p>
-          <p>
-            <a>Mail</a>
-          </p>
-          <p>
-            06
-          </p>
-        </div>
-        <div class="col-10 col-md-5 text-center p-3 m-3 contactInfo">
-          <p>
-            <span>Les témoins (Pauline)</span>
-          </p>
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-            </div>
-            <div class="col-12 col-sm-6">
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-10 col-md-5 text-center p-3 m-3 contactInfo">
-          <p>
-            <span>Les témoins (Sébastien)</span>
-          </p>
-          <div class="row">
-            <div class="col-12 col-sm-6">
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-            </div>
-            <div class="col-12 col-sm-6">
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-              <p>
-                <a>Mail</a>
-              </p>
-              <p>
-                06
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-10 col-md-5 text-center p-5 m-3 contactInfo">
-          <p>
-            <span>Contact technique</span>
-          </p>
-          <p>
-            <a>Mail</a>
-          </p>
-          <p>
-            06
-          </p>
+        <div *ngFor="let card of cards" class="col-12 col-md-8 col-lg-6 my-4">
+          <md-card>
+            <md-card-header>
+              <md-card-title>{{card.title}}</md-card-title>
+            </md-card-header>
+            <md-card-content>
+              <div *ngFor="let contact of card.contacts" class="row justify-content-around">
+                <div class="col-12 col-sm-6 d-flex my-2">
+                  <md-icon class="my-auto">phone</md-icon>
+                  <span class="my-auto" md-line>{{contact.phone}}</span>
+                </div>
+                <div class="col-12 col-sm-6 d-flex my-2">
+                  <md-icon class="my-auto">mail</md-icon>
+                  <a [href]="'mailto:' + contact.mail" class="my-auto" md-line>{{contact.mail}}</a>
+                </div>
+              </div>
+            </md-card-content>
+          </md-card>
         </div>
       </div>
     </div>

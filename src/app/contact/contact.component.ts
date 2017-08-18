@@ -10,7 +10,75 @@ import { routerTransition } from '../router.animations';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  public cards: any = [];
+
+  constructor() {
+
+    this.cards.push({
+      title: 'La mariée',
+      contacts: [{
+        name: 'Pauline Kraemer',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }]
+    })
+    this.cards.push({
+      title: 'Le marié',
+      contacts: [{
+        name: 'Sébastien Lommele',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }]
+    })
+    this.cards.push({
+      title: 'Les témoins (Pauline)',
+      contacts: [{
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }, {
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }, {
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }, {
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }]
+    })
+    this.cards.push({
+      title: 'Les témoins (Sébastien)',
+      contacts: [{
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }, {
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }, {
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }, {
+        name: 'dfghjkl',
+        phone: '0666666666',
+        mail: 'test@gmail.com'
+      }]
+    })
+    this.cards.push({
+      title: 'Contact technique',
+      contacts: [{
+        name: 'Louis Kraemer',
+        phone: '0666581702',
+        mail: 'louiskraemer@gmail.com'
+      }]
+    })
+  }
 
   ngOnInit() {
   }

@@ -7,8 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
-import {AngularFireModule} from "angularfire2";
-import {AngularFireDatabaseModule} from "angularfire2/database";
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 import { UserServiceService } from './user-service.service';
 import { PlanComponent } from './plan/plan.component';
@@ -22,10 +22,10 @@ import { ContactComponent } from './contact/contact.component';
 import { EvenPipe } from './even.pipe';
 import { SearchPipe } from './search.pipe';
 import {
-  MdAutocompleteModule, MdButtonModule, MdCardModule, MdCheckboxModule, MdInputModule,
-  MdSelectModule,
-  MdSlideToggleModule, MdSnackBarModule
-} from "@angular/material";
+  MdAutocompleteModule, MdButtonModule, MdCardModule, MdCheckboxModule, MdGridListModule, MdIconModule, MdInputModule,
+  MdListModule,
+  MdSelectModule, MdSnackBarModule
+} from '@angular/material';
 
 
 const appRoutes: Routes = [
@@ -41,12 +41,12 @@ const appRoutes: Routes = [
 ];
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyAbaDCrgLsPq7TiGFSy2JkovoFyeQcCJFs",
-  authDomain: "mariage-6c200.firebaseapp.com",
-  databaseURL: "https://mariage-6c200.firebaseio.com",
-  projectId: "mariage-6c200",
-  storageBucket: "mariage-6c200.appspot.com",
-  messagingSenderId: "508632744604"
+  apiKey: 'AIzaSyAbaDCrgLsPq7TiGFSy2JkovoFyeQcCJFs',
+  authDomain: 'mariage-6c200.firebaseapp.com',
+  databaseURL: 'https://mariage-6c200.firebaseio.com',
+  projectId: 'mariage-6c200',
+  storageBucket: 'mariage-6c200.appspot.com',
+  messagingSenderId: '508632744604'
 };
 
 @NgModule({
@@ -76,11 +76,13 @@ export const firebaseConfig = {
     MdInputModule,
     MdAutocompleteModule,
     MdCardModule,
-    MdSlideToggleModule,
     MdCheckboxModule,
     MdButtonModule,
     MdSelectModule,
-    MdSnackBarModule
+    MdSnackBarModule,
+    MdListModule,
+    MdIconModule,
+    MdGridListModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]
