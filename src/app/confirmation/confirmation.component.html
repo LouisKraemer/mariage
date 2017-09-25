@@ -10,7 +10,7 @@
         </md-input-container>
         <md-autocomplete #auto="mdAutocomplete">
           <md-option *ngFor="let user of users | async |search:searchUser" (onSelectionChange)="selectUser(user)">
-            {{user.lastName}} {{user.firstName}}
+            {{user.lastName}} {{user.firstName}} {{user.couple ? "et " + user.secondLastName + " " + user.secondFirstName : ""}}
           </md-option>
         </md-autocomplete>
         <md-card *ngIf="updateUser != null">

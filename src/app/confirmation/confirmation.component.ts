@@ -44,6 +44,7 @@ export class ConfirmationComponent implements OnInit {
   }
 
   updateInfo() {
+    this.updateUser.answered = true;
     this.userService.updateUser(this.updateUser, this.userKey).then(_ => {
       this.updateUser = null;
       this.snackBar.open('Merci pour votre confirmation', '', {
