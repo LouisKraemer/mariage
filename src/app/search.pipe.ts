@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchPipe implements PipeTransform {
 
   transform(array, search) {
-    if(array && search !== '') {
+    if (array && search) {
       return array.filter(user => {
         for (const searchArg of search.toLowerCase().split(' ')) {
           if (user.lastName.toLowerCase().search(searchArg) === -1 &&

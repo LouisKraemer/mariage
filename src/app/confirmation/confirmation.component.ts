@@ -37,7 +37,11 @@ export class ConfirmationComponent implements OnInit {
       coming: user.coming,
       firstName: user.firstName,
       lastName: user.lastName,
-      meal: user.meal
+      meal: user.meal,
+      couple: user.couple,
+      secondLastName: user.secondLastName,
+      secondFirstName: user.secondFirstName,
+      infos: user.infos
     }
     this.userKey = user.$key;
     this.searchUser = "";
@@ -51,6 +55,10 @@ export class ConfirmationComponent implements OnInit {
         duration: 2000
       })
     })
+  }
+
+  updateComing() {
+    this.updateUser.coming = !this.updateUser.coming;
   }
 
 }

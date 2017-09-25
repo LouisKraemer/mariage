@@ -15,11 +15,14 @@
         </md-autocomplete>
         <md-card *ngIf="updateUser != null">
           <md-card-header>
-            <md-card-title>{{updateUser.lastName}} {{updateUser.firstName}}</md-card-title>
+            <md-card-title *ngIf="!updateUser.couple">{{updateUser.lastName}} {{updateUser.firstName}}</md-card-title>
+            <md-card-title *ngIf="updateUser.couple">{{updateUser.lastName}} {{updateUser.firstName}} et
+            {{updateUser.secondLastName}} {{updateUser.secondFirstName}}</md-card-title>
           </md-card-header>
           <md-card-content>
             <section>
-              <md-checkbox [(ngModel)]="updateUser.coming">Je viens au mariage</md-checkbox>
+              <md-checkbox [ngModel]="updateUser.coming" (change)="updateComing()">Je viens au mariage</md-checkbox><br>
+              <md-checkbox [ngModel]="!updateUser.coming" (change)="updateComing()">Je ne viens pas au mariage</md-checkbox>
             </section>
             <section *ngIf="updateUser.coming && updateUser.apero.invited">
               <md-checkbox [(ngModel)]="updateUser.apero.coming">Apéritif</md-checkbox>
@@ -38,6 +41,11 @@
                 <md-option [value]="3">3</md-option>
                 <md-option [value]="4">4</md-option>
               </md-select>
+            </section>
+            <section *ngIf="updateUser.coming">
+              <md-input-container class="full-width">
+                <textarea mdInput placeholder="Remarques, allergies, ..." [(ngModel)]="updateUser.infos"></textarea>
+              </md-input-container>
             </section>
           </md-card-content>
           <md-card-actions>
