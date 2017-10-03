@@ -1,7 +1,10 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
+  background: url("../../assets/images/confirmation.jpg") no-repeat top;
+  background-size: cover;
   md-card {
     margin-top: 30px;
+    background-color: rgba(255,255,255,0.8);
     md-card-header {
       justify-content: center;
       md-card-title {
@@ -23,4 +26,8 @@
       }
     }
   }
+}
+
+.title {
+  background-color: #E0F2F1;
 }
