@@ -1,0 +1,53 @@
+#photoCarousel {
+  max-width: 375px;
+  top: 50%;
+  transform: translateY(-50%);
+  img {
+    object-fit: contain;
+    max-height: 250px;
+  }
+}
+
+@media (min-width: 576px) {
+  #photoCarousel {
+    max-width: 525px;
+    img {
+      max-height: 350px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #photoCarousel {
+    max-width: 750px;
+    img {
+      max-height: 500px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #photoCarousel {
+    max-width: 825px;
+    img {
+      max-height: 550px;
+    }
+  }
+}
+
+//@media (min-width: 1200px) {
+//  #photoCarousel {
+//    max-width: 1050px;
+//    img {
+//      max-height: 700px;
+//    }
+//  }
+//}
+
+.carousel-control-next {
+  background: linear-gradient(to right, transparent, rgba(0,0,0,2));
+}
+
+.carousel-control-prev {
+  background: linear-gradient(to left, transparent, rgba(0,0,0,2));
+}

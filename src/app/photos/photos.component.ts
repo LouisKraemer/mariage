@@ -9,8 +9,13 @@ import { routerTransition } from '../router.animations';
     host: {'[@routerTransition]': ''}
 })
 export class PhotosComponent implements OnInit {
+  public photos = [];
 
-  constructor() { }
+  constructor() {
+    for (let i = 2; i < 17; i++) {
+      this.photos.push(i);
+    }
+  }
 
   ngOnInit() {
   }
