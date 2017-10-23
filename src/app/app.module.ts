@@ -22,9 +22,8 @@ import { ContactComponent } from './contact/contact.component';
 import { EvenPipe } from './even.pipe';
 import { SearchPipe } from './search.pipe';
 import {
-  MdAutocompleteModule, MdButtonModule, MdCardModule, MdCheckboxModule, MdGridListModule, MdIconModule, MdInputModule,
-  MdListModule,
-  MdSelectModule, MdSnackBarModule
+  MatAutocompleteModule, MatButtonModule, MatCardModule, MatCheckboxModule, MatGridListModule, MatIconModule,
+  MatInputModule, MatListModule, MatSelectModule, MatSnackBarModule, MatStepperModule
 } from '@angular/material';
 
 
@@ -73,16 +72,17 @@ export const firebaseConfig = {
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    MdInputModule,
-    MdAutocompleteModule,
-    MdCardModule,
-    MdCheckboxModule,
-    MdButtonModule,
-    MdSelectModule,
-    MdSnackBarModule,
-    MdListModule,
-    MdIconModule,
-    MdGridListModule
+    MatInputModule,
+    MatAutocompleteModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatListModule,
+    MatIconModule,
+    MatGridListModule,
+    MatStepperModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]

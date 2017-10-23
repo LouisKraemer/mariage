@@ -5,53 +5,55 @@
   <div class="main-content">
     <div class="row">
       <div class="col-12 offset-md-3 col-md-6">
-        <md-input-container class="full-width" style="margin-top: 10px">
-          <input mdInput placeholder="Nom et prénom" [(ngModel)]="searchUser" [mdAutocomplete]="auto">
-        </md-input-container>
-        <md-autocomplete #auto="mdAutocomplete">
-          <md-option *ngFor="let user of users | async |search:searchUser" (onSelectionChange)="selectUser(user)">
+        <mat-form-field class="full-width" style="margin-top: 10px">
+          <input matInput placeholder="Nom et prénom" [(ngModel)]="searchUser" [matAutocomplete]="auto">
+        </mat-form-field>
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let user of users | async |search:searchUser" (onSelectionChange)="selectUser(user)">
             {{user.lastName}} {{user.firstName}} {{user.couple ? "et " + user.secondLastName + " " + user.secondFirstName : ""}}
-          </md-option>
-        </md-autocomplete>
-        <md-card *ngIf="updateUser != null">
-          <md-card-header>
-            <md-card-title *ngIf="!updateUser.couple">{{updateUser.lastName}} {{updateUser.firstName}}</md-card-title>
-            <md-card-title *ngIf="updateUser.couple">{{updateUser.lastName}} {{updateUser.firstName}} et
-            {{updateUser.secondLastName}} {{updateUser.secondFirstName}}</md-card-title>
-          </md-card-header>
-          <md-card-content>
+          </mat-option>
+        </mat-autocomplete>
+        <mat-card *ngIf="updateUser != null">
+          <mat-card-header>
+            <mat-card-title *ngIf="!updateUser.couple">{{updateUser.lastName}} {{updateUser.firstName}}</mat-card-title>
+            <mat-card-title *ngIf="updateUser.couple">{{updateUser.lastName}} {{updateUser.firstName}} et
+            {{updateUser.secondLastName}} {{updateUser.secondFirstName}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
             <section>
-              <md-checkbox [ngModel]="updateUser.coming" (change)="updateComing()">Je viens au mariage</md-checkbox><br>
-              <md-checkbox [ngModel]="!updateUser.coming" (change)="updateComing()">Je ne viens pas au mariage</md-checkbox>
+              <mat-checkbox [ngModel]="updateUser.coming" (change)="updateComing()">Je viens au mariage</mat-checkbox><br>
+              <mat-checkbox [ngModel]="!updateUser.coming" (change)="updateComing()">Je ne viens pas au mariage</mat-checkbox>
             </section>
             <section *ngIf="updateUser.coming && updateUser.apero.invited">
-              <md-checkbox [(ngModel)]="updateUser.apero.coming">Apéritif</md-checkbox>
+              <mat-checkbox [(ngModel)]="updateUser.apero.coming">Apéritif</mat-checkbox>
             </section>
             <section *ngIf="updateUser.coming && updateUser.meal.invited">
-              <md-checkbox [(ngModel)]="updateUser.meal.coming">Repas</md-checkbox>
+              <mat-checkbox [(ngModel)]="updateUser.meal.coming">Repas</mat-checkbox>
             </section>
             <section *ngIf="updateUser.coming && updateUser.brunch.invited">
-              <md-checkbox [(ngModel)]="updateUser.brunch.coming">Brunch</md-checkbox>
+              <mat-checkbox [(ngModel)]="updateUser.brunch.coming">Brunch</mat-checkbox>
             </section>
             <section  *ngIf="updateUser.coming" style="justify-content: flex-end; display: flex">
-              <md-select placeholder="Enfants" [(ngModel)]="updateUser.children">
-                <md-option [value]="0">0</md-option>
-                <md-option [value]="1">1</md-option>
-                <md-option [value]="2">2</md-option>
-                <md-option [value]="3">3</md-option>
-                <md-option [value]="4">4</md-option>
-              </md-select>
+              <mat-form-field style="width: 20%">
+                <mat-select placeholder="Enfants" [(ngModel)]="updateUser.children">
+                  <mat-option [value]="0">0</mat-option>
+                  <mat-option [value]="1">1</mat-option>
+                  <mat-option [value]="2">2</mat-option>
+                  <mat-option [value]="3">3</mat-option>
+                  <mat-option [value]="4">4</mat-option>
+                </mat-select>
+              </mat-form-field>
             </section>
             <section *ngIf="updateUser.coming">
-              <md-input-container class="full-width">
-                <textarea mdInput placeholder="Remarques, allergies, ..." [(ngModel)]="updateUser.infos"></textarea>
-              </md-input-container>
+              <mat-input-container class="full-width">
+                <textarea matInput placeholder="Remarques, allergies, ..." [(ngModel)]="updateUser.infos"></textarea>
+              </mat-input-container>
             </section>
-          </md-card-content>
-          <md-card-actions>
-            <button md-button (click)="updateInfo()">Confirmer</button>
-          </md-card-actions>
-        </md-card>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button (click)="updateInfo()">Confirmer</button>
+          </mat-card-actions>
+        </mat-card>
       </div>
       </div>
     </div>

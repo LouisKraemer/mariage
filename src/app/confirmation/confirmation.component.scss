@@ -2,23 +2,23 @@
 .main-content {
   background: url("../../assets/images/confirmation.jpg") no-repeat top;
   background-size: cover;
-  md-card {
+  mat-card {
     margin-top: 30px;
     background-color: rgba(255,255,255,0.8);
-    md-card-header {
+    mat-card-header {
       justify-content: center;
-      md-card-title {
+      mat-card-title {
         font-size: 20px;
       }
     }
-    md-card-content {
+    mat-card-content {
       margin: 20px;
       section {
         margin-top: 15px;
         margin-bottom: 15px;
       }
     }
-    md-card-actions {
+    mat-card-actions {
       display: flex;
       justify-content: flex-end;
       button {
@@ -26,8 +26,4 @@
       }
     }
   }
-}
-
-.title {
-  background-color: #E0F2F1;
 }

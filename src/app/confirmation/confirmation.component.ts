@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService} from '../user-service.service';
 import { routerTransition } from '../router.animations';
-import {FormControl} from "@angular/forms";
-import {Observable} from "rxjs/Observable";
-import {MdSnackBar} from "@angular/material";
+import {FormControl} from '@angular/forms';
+import {Observable} from 'rxjs/Observable';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-confirmation',
@@ -20,9 +20,9 @@ export class ConfirmationComponent implements OnInit {
     public users: any;
     updateUser = null;
     userKey: string;
-    searchUser = "";
+    searchUser = '';
 
-  constructor(public userService: UserServiceService, public snackBar: MdSnackBar) {
+  constructor(public userService: UserServiceService, public snackBar: MatSnackBar) {
     this.users = this.userService.getUsers();
   }
 
@@ -42,9 +42,9 @@ export class ConfirmationComponent implements OnInit {
       secondLastName: user.secondLastName,
       secondFirstName: user.secondFirstName,
       infos: user.infos
-    }
+    };
     this.userKey = user.$key;
-    this.searchUser = "";
+    this.searchUser = '';
   }
 
   updateInfo() {

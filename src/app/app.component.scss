@@ -88,6 +88,10 @@
     }
 }
 
+.title {
+  background-color: #ECEFF1 !important;
+}
+
 @include media-breakpoint-up(sm) {
     #side-menu {
         width: 55%;
