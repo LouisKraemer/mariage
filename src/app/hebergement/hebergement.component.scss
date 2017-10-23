@@ -1,10 +1,10 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
-  md-card {
-    md-card-title {
+  mat-card {
+    mat-card-title {
       font-size: 20px;
     }
-    md-card-actions {
+    mat-card-actions {
       display: flex;
       justify-content: flex-end;
       button {

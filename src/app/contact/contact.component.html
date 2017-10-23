@@ -5,23 +5,23 @@
     <div class="main-content p-4">
       <div class="row justify-content-around">
         <div *ngFor="let card of cards" class="col-12 col-md-8 col-lg-6 my-4">
-          <md-card>
-            <md-card-header>
-              <md-card-title>{{card.title}}</md-card-title>
-            </md-card-header>
-            <md-card-content>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{card.title}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
               <div *ngFor="let contact of card.contacts" class="row justify-content-around">
                 <div class="col-12 col-sm-6 d-flex my-2">
-                  <md-icon class="my-auto">phone</md-icon>
-                  <span class="my-auto" md-line>{{contact.phone}}</span>
+                  <mat-icon class="my-auto">phone</mat-icon>
+                  <span class="my-auto" mat-line>{{contact.phone}}</span>
                 </div>
                 <div class="col-12 col-sm-6 d-flex my-2">
-                  <md-icon class="my-auto">mail</md-icon>
-                  <a [href]="'mailto:' + contact.mail" class="my-auto" md-line>{{contact.mail}}</a>
+                  <mat-icon class="my-auto">mail</mat-icon>
+                  <a [href]="'mailto:' + contact.mail" class="my-auto" mat-line>{{contact.mail}}</a>
                 </div>
               </div>
-            </md-card-content>
-          </md-card>
+            </mat-card-content>
+          </mat-card>
         </div>
       </div>
     </div>
