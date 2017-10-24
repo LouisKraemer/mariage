@@ -23,7 +23,7 @@ import { EvenPipe } from './even.pipe';
 import { SearchPipe } from './search.pipe';
 import {
   MatAutocompleteModule, MatButtonModule, MatCardModule, MatCheckboxModule, MatGridListModule, MatIconModule,
-  MatInputModule, MatListModule, MatSelectModule, MatSnackBarModule, MatStepperModule
+  MatInputModule, MatListModule, MatSelectModule, MatSnackBarModule
 } from '@angular/material';
 
 
@@ -81,8 +81,7 @@ export const firebaseConfig = {
     MatSnackBarModule,
     MatListModule,
     MatIconModule,
-    MatGridListModule,
-    MatStepperModule
+    MatGridListModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]

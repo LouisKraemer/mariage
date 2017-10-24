@@ -1,7 +1,23 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import '~@angular/material/theming';
+//
+//@font-face {
+//  font-family: "Wedding Font";
+//  src: url('/assets/font/wedding_font.ttf');
+//}
+//
+//$custom-typography: mat-typography-config(
+//  $font-family: 'Wedding Font',
+//  $headline: mat-typography-level(32px, 48px, 700),
+//  $body-1: mat-typography-level(16px, 24px, 500)
+//);
+//
+//@include angular-material-typography($custom-typography);
+
 body {
   font-family: 'Slabo 27px';
+  //font-family: "Wedding Font";
 }
 
 .main-content {
@@ -14,6 +30,7 @@ body {
   overflow-y: auto;
   padding-left: 20px;
   padding-right: 20px;
+  //font-family: "Wedding Font" !important;
 }
 
 .title {

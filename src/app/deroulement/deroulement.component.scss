@@ -2,3 +2,19 @@
     background: url("../../assets/images/deroulement.jpg") no-repeat center fixed;
     background-size: cover;
 }
+
+mat-card {
+  width: 50%;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.65);
+  padding: 15px 10px;
+  mat-card-header {
+    justify-content: center;
+    mat-card-title {
+      font-weight: bold;
+    }
+  }
+  mat-card-content {
+    text-align: center;
+  }
+}
