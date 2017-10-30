@@ -35,11 +35,13 @@
 }
 
 #side-menu {
+  font-family: 'Tangerine', serif;
   overflow-y: auto;
   background-color: #212121;
     color: white;
     z-index: 5000;
-    font-size: 20px;
+    font-size: 33px;
+  line-height: 33px;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +73,7 @@
     }
     div div div {
         padding: 25px;
-        font-size: 25px;
+        font-size: 33px;
         text-align: center;
         cursor: default;
     }

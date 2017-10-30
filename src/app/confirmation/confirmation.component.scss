@@ -8,7 +8,7 @@
     mat-card-header {
       justify-content: center;
       mat-card-title {
-        font-size: 20px;
+        font-size: 28px;
       }
     }
     mat-card-content {
@@ -23,7 +23,28 @@
       justify-content: flex-end;
       button {
         padding: 10px;
+        font-family: 'Tangerine', serif;
+        font-size: 28px;
+        text-shadow: 1px 1px 10px black;
       }
     }
+    .mat-checkbox {
+      font-family: 'Tangerine', serif;
+      font-size: 26px;
+    }
   }
+  .mat-input-element {
+    font-family: 'Tangerine', serif;
+    font-size: 26px;
+  }
+}
+
+.mat-option {
+  font-family: 'Tangerine', serif;
+  font-size: 26px;
+  height: inherit !important;
+  line-height: inherit !important;
+}
+.mat-select {
+  font-family: 'Tangerine', serif;
 }
