@@ -1,8 +1,9 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 .main-content {
   mat-card {
+    width: 100%;
     mat-card-title {
-      font-size: 20px;
+      font-size: 24px;
     }
     mat-card-actions {
       display: flex;
