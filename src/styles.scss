@@ -38,10 +38,16 @@
   height: 60px;
   line-height: 60px;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
   font-family: 'Tangerine', serif;
   //text-shadow: 2px 2px 2px #aaa;
+}
+
+@include media-breakpoint-up(md) {
+  .title {
+    font-size: 40px;
+  }
 }
 
 .full-width {
