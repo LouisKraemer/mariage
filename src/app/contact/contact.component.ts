@@ -18,16 +18,16 @@ export class ContactComponent implements OnInit {
       title: 'La mariée',
       contacts: [{
         name: 'Pauline Kraemer',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
+        phone: '+33 6 30 04 06 90',
+        mail: 'paulinekraemer0@gmail.com'
       }]
     })
     this.cards.push({
       title: 'Le marié',
       contacts: [{
         name: 'Sébastien Lommele',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
+        phone: '+33 6 47 05 87 18',
+        mail: 'sebastien.lommele@hotmail.fr'
       }]
     })
     this.cards.push({
@@ -40,41 +40,25 @@ export class ContactComponent implements OnInit {
         name: 'dfghjkl',
         phone: '0666666666',
         mail: 'test@gmail.com'
-      }, {
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
-      }, {
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
       }]
     })
     this.cards.push({
       title: 'Les témoins (Sébastien)',
       contacts: [{
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
+        name: 'Benoît Hetzel',
+        phone: '+33 6 22 03 68 72',
+        mail: 'hetzel.benoit@gmail.com'
       }, {
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
-      }, {
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
-      }, {
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
+        name: 'Gautier Ohl',
+        phone: '+33 6 31 46 51 39',
+        mail: 'gautier.ohl@gmail.com'
       }]
     })
     this.cards.push({
       title: 'Contact technique',
       contacts: [{
         name: 'Louis Kraemer',
-        phone: '0666581702',
+        phone: '+33 6 66 58 17 02',
         mail: 'louiskraemer@gmail.com'
       }]
     })
