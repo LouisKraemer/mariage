@@ -4,10 +4,15 @@
   mat-icon {
     margin-right: 10px;
   }
-  span {
-    font-size: 15px;
-  }
-  a {
-    font-size: 15px;
+  .mat-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px 12px;
+    .mat-card-title {
+      font-size: 26px;
+      text-shadow: 2px 2px 2px #aaa;
+    }
+    .mat-card-content {
+      text-shadow: 2px 2px 2px #aaa;
+    }
   }
 }

@@ -13,7 +13,8 @@
               <div *ngFor="let contact of card.contacts" class="row justify-content-around">
                 <div class="col-12 col-sm-6 d-flex my-2">
                   <mat-icon class="my-auto">phone</mat-icon>
-                  <span class="my-auto" mat-line>{{contact.phone}}</span>
+                  <!--<span class="my-auto" mat-line>{{contact.phone}}</span>-->
+                  <a [href]="'tel:' + contact.phone" class="my-auto" mat-line>{{contact.phone}}</a>
                 </div>
                 <div class="col-12 col-sm-6 d-flex my-2">
                   <mat-icon class="my-auto">mail</mat-icon>

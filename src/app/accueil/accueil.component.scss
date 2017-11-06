@@ -1,4 +1,19 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
 .main-content {
   background: url("../../assets/images/accueil.jpg") no-repeat top;
   background-size: cover;
+  a {
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .main-content {
+    a {
+      font-size: 44px;
+    }
+  }
 }

@@ -1,9 +1,19 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
 .main-content {
     background: url("../../assets/images/tahiti.jpg") no-repeat center;
     background-size: cover;
   a {
-    font-size: 50px;
+    font-size: 35px;
     color: white;
-    text-shadow: 3px 3px 5px #000000;
+    text-shadow: 2px 2px 2px #000000;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .main-content {
+    a {
+      font-size: 44px;
+    }
   }
 }
