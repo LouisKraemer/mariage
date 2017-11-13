@@ -11,14 +11,17 @@
             </mat-card-header>
             <mat-card-content>
               <div *ngFor="let contact of card.contacts" class="row justify-content-around">
+                <div class="contact-separator"></div>
                 <div class="col-12 col-sm-6 d-flex my-2">
                   <mat-icon class="my-auto">phone</mat-icon>
-                  <!--<span class="my-auto" mat-line>{{contact.phone}}</span>-->
                   <a [href]="'tel:' + contact.phone" class="my-auto" mat-line>{{contact.phone}}</a>
                 </div>
-                <div class="col-12 col-sm-6 d-flex my-2">
+                <div class="col-12 col-sm-6 d-flex my-2" *ngIf="contact.mail">
                   <mat-icon class="my-auto">mail</mat-icon>
                   <a [href]="'mailto:' + contact.mail" class="my-auto" mat-line>{{contact.mail}}</a>
+                </div>
+                <div class="col-12 col-sm-6 d-flex my-2" *ngIf="!contact.mail">
+                  {{contact.name}}
                 </div>
               </div>
             </mat-card-content>

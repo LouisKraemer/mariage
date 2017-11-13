@@ -33,13 +33,17 @@ export class ContactComponent implements OnInit {
     this.cards.push({
       title: 'Les témoins (Pauline)',
       contacts: [{
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
+        name: 'Marga Savin',
+        phone: '+33 6 30 80 15 59',
       }, {
-        name: 'dfghjkl',
-        phone: '0666666666',
-        mail: 'test@gmail.com'
+        name: 'Pauline Loth',
+        phone: '+33 6 82 15 89 60',
+      }, {
+        name: 'Emma Incatasciato',
+        phone: '+33 6 50 53 34 99'
+      }, {
+        name: 'Marion Perche',
+        phone: '+33 6 34 24 14 69'
       }]
     })
     this.cards.push({
