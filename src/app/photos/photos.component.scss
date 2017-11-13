@@ -1,6 +1,7 @@
 #photoCarousel {
   max-width: 375px;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   img {
     object-fit: contain;
