@@ -5,8 +5,8 @@ import { routerTransition } from '../router.animations';
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-    animations: [routerTransition()],
-    host: {'[@routerTransition]': ''}
+  animations: [routerTransition()],
+  host: { '[@routerTransition]': '' }
 })
 export class ContactComponent implements OnInit {
 
@@ -56,6 +56,12 @@ export class ContactComponent implements OnInit {
         name: 'Gautier Ohl',
         phone: '+33 6 31 46 51 39',
         mail: 'gautier.ohl@gmail.com'
+      }, {
+        name: 'Julien Diez',
+        phone: '+33 7 71 88 69 69',
+      }, {
+        name: 'Nicolas Lommelé',
+        phone: '+33 6 71 13 94 41',
       }]
     })
     this.cards.push({
